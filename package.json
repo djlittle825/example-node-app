@@ -1,0 +1,8 @@
+{
+  "name": "example-web-app",
+  "version": "1.0.0",
+  "main": "index",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
