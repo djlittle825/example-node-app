@@ -1,11 +1,17 @@
 on: push
 jobs:
   first-job:
+    name: Bild with node
     runs-on: ubuntu-latest
     container: node:18.20.2
     steps:
-      - run: node --version
-      - run: npm --version 
-      - uses: actions/checkout@v4
-      - run: npm install
-      - run: node index.js
+      - name: Check Node.js version 
+        run: node --version
+      - name: Check NPM version
+        run: npm --version
+      - name: Checkout code 
+        uses: actions/checkout@v4
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Execute Node application
+        run: node index.js
